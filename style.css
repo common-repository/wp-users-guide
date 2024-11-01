@@ -1,0 +1,242 @@
+/*
+ wp users guide style
+*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+	Bootstrapの影響が出る箇所(表示オプション、ヘルプ)を修正
+	(bootstrap.min.css の .hidden は削除)
+*/
+.help-tab-content p, .contextual-help-sidebar p {
+	margin: 1em 0;
+	}
+.contextual-help-tabs {
+	font-size: 13px;
+	}
+#screen-options-wrap legend {
+	margin: 0;
+	padding: 8px 0;
+	font-size: 13px;
+	font-weight: 600;
+	border-bottom: none;
+	}
+#screen-options-wrap label {
+	font-size: 13px;
+	font-weight: normal;
+	margin-bottom: 0;
+	}
+/* bootstrap overwrite -end */
+
+#txt-as-interval, #txt-rev-val {
+	width: 6em;
+	text-align: right;
+	}
+
+#ug-dashboard {
+	position: absolute;
+	z-index: 10001;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80%;
+	max-width: 600px;
+	min-width: 250px;
+	display: none;
+	}
+
+#ug-bg {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	background-color: #666;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	display: none;
+	}
+
+.ug-help-sign {
+	font-size: 14px;
+	cursor: pointer;
+	}
+
+#dashboard-help-index td {
+	cursor: pointer;
+	}
+
+#help-dialog {
+	position: absolute;
+	z-index: 10002;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80%;
+	max-width: 800px;
+	min-width: 300px;
+	height: 90%;
+	max-height: 600px;
+	min-height: 300px;
+	display: none;
+	}
+#help-dialog .panel-footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	}
+#help-index tr {
+	cursor: pointer;
+	}
+#help-index tbody, #help-dialog .panel-body {
+	overflow: auto;
+	}
+#help-select {
+	width: auto;
+	}
+
+/*
+ ヘルプ詳細
+*/
+.ug-help-ul > li {
+	padding-bottom: 1em;
+	}
+.ug-help-ul > li:after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+	}
+.ug-help-ul h3 {
+	position: relative;
+	margin: 0 0 0.5em 0;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 15px;
+	}
+.ug-help-ul h3:first-child {
+	padding-top: 0;
+	}
+.ug-help-ul h3 span {
+	z-index: 2;
+	position: relative;
+	padding-right: 1em;
+	padding-bottom: 3px;
+	background-color: #fff;
+	}
+.ug-help-ul h3:before {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #3498db;
+	}
+.ug-help-ul h3 .glyphicon {
+	padding-right: 0.5em;
+	}
+.ug-help-ul h4 {
+	font-size: 16px;
+	font-weight: bold;
+	}
+.ug-help-ul .sample {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	}
+.ug-help-ul span.menu {
+	font-weight: bold;
+	color: #fff;
+	padding: 3px 2px;
+	background-color: #336699;
+	border-radius: 4px;
+	}
+
+.ug-help-ul li > ol {
+		display: inline-block;
+	}
+
+.ug-help-ul li > ul {
+		display: inline-block;
+		padding-left: 40px;
+		list-style-type: disc;
+	}
+.ug-help-ul li > ul ul {
+		list-style-type: circle;
+	}
+
+.ug-help-ul .img-float-left {
+	float: left;
+	padding: 5px;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+	}
+
+.float-cut {
+	clear: both;
+	}
+.float-cut-left {
+	clear: left;
+	}
+.float-cut-right {
+	clear: right;
+	}
+
+/*
+ jQuery UI tooltip style
+ http://jsfiddle.net/tj_vantoll/kyBwU/
+*/
+.ui-tooltip {
+	background: #333;
+	color: white;
+	font-size: 12px;
+	border: none;
+	padding: 0;
+	opacity: 1;
+	z-index: 10003;
+	}
+.ui-tooltip-content {
+	position: relative;
+	padding: 10px;
+	}
+.ui-tooltip-content::after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	display: block;
+	width: 0;
+	}
+.right .ui-tooltip-content::after {
+	top: 18px;
+	left: -10px;
+	border-color: transparent #333;
+	border-width: 10px 10px 10px 0;
+	}
+.left .ui-tooltip-content::after {
+	top: 18px;
+	right: -10px;
+	border-color: transparent #333;
+	border-width: 10px 0 10px 10px;
+	}
+.top .ui-tooltip-content::after {
+	bottom: -10px;
+	right: 10px;
+	border-color: #333 transparent;
+	border-width: 10px 10px 0;    
+	}
+.bottom .ui-tooltip-content::after {
+	top: -10px;
+	left: 72px;
+	border-color: #333 transparent;
+	border-width: 0 10px 10px;
+	}
